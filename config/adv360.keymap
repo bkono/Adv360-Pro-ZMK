@@ -19,7 +19,7 @@
 
         macro_pipe: macro_pipe {
             compatible = "zmk,behavior-macro";
-            label = "MACRO_PIPE";
+            label = "macro_pipe";
             #binding-cells = <0>;
             bindings = <&kp PIPE &kp GT &kp SPACE>;
         };
@@ -40,14 +40,7 @@
     macros {
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        macro_combo {
-            bindings = <&macro_pipe>;
-            key-positions = <54 55>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -76,7 +69,7 @@
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3           &kp F7           &kp F8                &kp F9                 &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none           &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &macro_pipe     &kp EQUAL        &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none           &kp EQUAL        &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                          &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &kp UNDERSCORE                   &kp AMPERSAND         &kp ASTERISK           &trans   &trans   &trans
             >;
